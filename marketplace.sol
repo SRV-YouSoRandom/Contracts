@@ -51,7 +51,7 @@ contract NFTMarket is
         uint256 maxMints
     ) public initializer {
         __ERC721_init(name, symbol);
-        __Ownable_init();
+        __Ownable_init(msg.sender);
         __ReentrancyGuard_init();
         __Pausable_init();
 
